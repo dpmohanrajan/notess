@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        label{
+            display: inline-block;
+            width: 200px;
+        }
+        body{
+            background-color: rgba(137, 43, 226, 0.224);
+        }
+        form{
+            margin-top:45vh;
+            text-decoration-style: dashed;
+        }
+        </style>
+        <script type="text/javascript">
+            function user(){
+                var id=document.getElementById('us').value;
+                var pattern=/^[a-zA-Z0-9\_]+$/;
+                if(id.match(pattern)){
+                    return true;
+                }else if(id.length>=10){
+                    alert("Username should contain only letters and numbers '' and upto 20 characters only");
+                    return false;
+                }
+            }
+            function valid(){
+                if(user()){
+                    return true;
+                }
+            }
+           
+        </script>
+    </head>
+    <body>
+        <form  action="#" align="center">
+            <h1>Teacher login</h1><br>
+                <label>User ID</label><input id="us"><br>
+                <br>
+                <label>Password</label><input><br>
+                <button onclick="valid();">Submit</button>
+        </form>
+    </body>
+</html>

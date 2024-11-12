@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lan="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+            img{
+                height:20px;
+                width:20px;
+                margin-right: 8px;
+            }
+            body{
+                font-family:monospace;
+                scroll-margin: 0%;
+                display: block;
+            }
+            .wrapper .sidenav{
+                position: fixed;
+                left:0;
+                top: 0;
+                width: 20vw;
+                height: 100vh;
+                background: rgb(19, 11, 27);
+            }
+            .wrapper .main{
+                width: 80vw;
+                margin: 20vw;
+            }
+            .wrapper .sidenav h1{
+                color:#fff;
+                text-align: center;
+                line-height: 90px;
+                border-bottom: 1px dotted white;
+                margin-bottom: 50px;
+            }
+            .wrapper .sidenav ul li{
+                list-style: none;
+                padding: 17px;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            a{
+                color:#fff;
+                text-decoration: none;
+            }
+            .wrapper .sidenav .social{
+                position: absolute;
+                bottom:8px;
+                left:50%;
+                transform: translate(-50%);
+                display: flex;
+            }
+            .wrapper .sidenav .social a{
+                margin:0 10px;
+                background: #575051;
+                border-radius: 5px;
+                height: 20px;
+                width: 20px;
+                display: flex;
+                align-items: center;
+            }
+            .wrapper .sidenav .social a img{
+                margin:0 auto;
+            }
+            .wrapper .sidenav .social a:hover{
+                transition: 1s;
+                transform: rotate(360deg);
+                overflow-y: inherit;          
+            }
+            section{
+                height: 200vh;
+                padding: 30px;
+                background-color: black;
+               
+            }
+            .main p{
+                color:#fff;
+                text-align:justify;
+                position: absolute;
+                left:21vw;
+
+            }
+            .notes{
+                font-style: italic;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: underline;
+            }
+            .notes:hover{
+                background:violet;
+                transition: .5s;
+            }
+        </style>
+    </head>
+<body>
+    <div class="wrapper">
+        <div class="sidenav">
+            <h1>Notes</h1>
+            <ul>
+                <li><a href="#section1"><img src="Physics.jpeg"> <b>Physics</b></a></li>
+                <li><a href="#section2"><img src="Chemistry.webp"> <b>Chemistry</b></a></li>
+                <li><a href="#section3"><img src="Maths.jpg"> <b>Mathematics</b></a></li>
+                <li><a href="#section4"><img src="biology.jpg"> <b>Biology</b></a></li>
+               <li>><a href="#section5"><b>Click here to attend Mock Quiz</b></a></li>
+            </ul>
+           
+        </div></div>
+        <div class="main">
+            <section id="section1">
+                <div>
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Physics" title="Click here for more info" target="_blank">Physics</a> is the natural science of matter, involving the study of matter<br>
+                        its fundamental constituents, its motion and behavior through space and time,<br>
+                        and the related entities of energy and force Physics is one of the most fundamental scientific disciplines,<br>
+                        with its main goal being to understand how the universe behaves.<br>
+                        A scientist who specializes in the field of physics is called a physicist.<br>
+                        <a href="Physics.pdf" download="Physics notes" class="notes">Click here to download notes</a>
+                    </p>
+                </div>
+                    
+            </section>
+                   
+            <section id="section2">
+                     <p>
+                        <a href="https://en.wikipedia.org/wiki/Chemistry" title="Click here for more info" target="_blank">Chemistry</a> is the scientific study of the properties and behavior of matter.<br>
+                        It is a physical science under natural sciences that covers the elements that make up matter to the compounds made of atoms,<br>
+                        molecules and ions: their composition, structure, properties, behavior and the changes they undergo during a reaction with other substances.<br>
+                        Chemistry also addresses the nature of chemical bonds in chemical compounds.<br>
+                        <a href="Chemistry.pdf" download="Chemistry notes" class="notes">Click here to download notes</a>
+                    </p>
+            </section>
+
+            <section id="section3">
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Mathematics" title="Click here for more info" target="_blank">Mathematics</a> is an area of knowledge that includes the topics of numbers, formulas and related structures,<br>
+                        shapes and the spaces in which they are contained, and quantities and their changes.<br>
+                        These topics are represented in modern mathematics with the major subdisciplines of number theory, algebra, geometry, and analysis,respectively.<br>
+                        There is no general consensus among mathematicians about a common definition for their academic discipline.<br>
+                        <a href="Maths.pdf" download="Maths notes" class="notes">Click here to download notes</a>
+                    </p>
+            </section>
+
+            <section id="section4">
+                <p>
+                    <a href="https://en.wikipedia.org/wiki/Biology" title="Click here for more info" target="_blank">Biology</a> is the scientific study of life.
+                    It is a natural science with a broad scope but has several unifying themes that tie it together as a single,<br>
+                    coherent field.For instance, all organisms are made up of cells that process hereditary information encoded in genes,<br>
+                    which can be transmitted to future generations. Another major theme is evolution, which explains the unity and diversity of life.<br>
+                    Energy processing is also important to life as it allows organisms to move, grow, and reproduce.<br>
+                    Finally, all organisms are able to regulate their own internal environments.<br>
+                    <a href="biology.pdf" download="Biology notes" class="notes">Click here to download notes</a>
+                </p>
+            </section>
+            <section id="section5">
+                <a href="Forms.html">Click here to attend the quiz</a>
+            </section>
+        </div>
+
+</body>
+</html>

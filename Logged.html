@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body{
+                background-color: black;
+                color:white;
+                background: url("jw.webp");
+                background-size: cover;
+            }
+            .user{
+                border: 2px solid cyan;
+               
+            }
+            .regid{
+                border:2px solid mediumpurple;
+            }
+            .user,.regid{
+                text-align: center;
+                margin-top: 20px;
+                padding-bottom: 20px;
+            }
+            .regid input,.user input{
+                background: rgba(98, 82, 124, 0.178);
+                color: cyan;
+                
+            }
+            label{
+                width: 240px;
+                display: inline-block;
+                text-align: left;
+            }
+            #dob{
+                width:225px;
+            }
+            input[type="date"]{
+                width:170px;
+                text-transform: uppercase;
+            }     
+            .regid input[placeholder]:hover{
+                text-transform: uppercase ;
+            } 
+            .regid input{
+                width: 200px;
+               height:50px;
+            }
+
+        </style>
+        <script type="text/javascript">
+            {
+                function namee()
+                {
+                    var name=document.getElementById("name").value;
+                    var pattern=/^[a-zA-Z]+$/;
+                    if(!name.match(pattern))
+                    {
+                        alert("Name should Have letters Only!");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+                function agee()
+                {
+                    var age=document.getElementById("age").value;
+                    pattern=/^[0-9]+$/;
+                    if(!age.match(pattern))
+                    {
+                        alert("Age Should Have Numbers Only!");
+                    }
+                    else if(age>=10)
+                    {
+                        return true;
+                    }
+                    else{
+                        alert("Age Should Have After 10!");
+                        return false;
+                    }
+                }
+                function phone()
+                {
+                    var num=document.getElementById("num").value;
+                    var pattern=/^[0-9]+$/;
+                    if(!num.match(pattern))
+                    {
+                        alert("Number Should Have Digits Only!");
+                        return false;
+                    }
+                    else if(num.length!==10){
+                        alert("Number Should Have 10 Digits");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+                function email()
+                {
+                    var mail=document.getElementById("mail").value;
+                    var pattern=/^([a-zA-Z0-9])+\@(([a-zA-Z0-9+])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    if(mail.match(pattern))
+                    {
+                        return true;
+                    }
+                    else{
+                        alert("Invalid Email id!");
+                        return false;
+                    }
+                }
+                function unamee()
+                {
+                    var name=document.getElementById("usname").value;
+                    var pattern=/^[a-zA-Z0-9_\.]+$/;
+                    if(!name.match(pattern))
+                    {
+                        alert("UserName should Have letters and digits or _ Only!");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+                function upasss()
+                {
+                    var userpass=document.getElementById("upass").value;
+                    pattern=/^[0-9a-zA-Z/@/]+$/;
+                    if(!userpass.match(pattern))
+                    {
+                        alert("Password Should Have letters And digits And @ ");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                }
+                function main()
+                {
+                    if(namee())
+                    {
+                        if(agee())
+                        {
+                            if(phone())
+                            {
+                                if(email())
+                                {
+                                    if(unamee())
+                                    {
+                                        if(upasss())
+                                        {
+                                            return true;
+                                            document.location.href="about.html";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+            <form action="#" align="center" onsubmit="main();">
+                <div class="user">
+                    <h1>User Registration</h1><br><br>
+                    <h3>User Details</h3><br><br>
+                    <label>Name:</label><input type="text" id="name"><br><br>
+                    <label>Age</label><input type="text" id="age"><br><br>
+                    <label>Mobile Number:</label><input type="text" id="num" ><br><br>
+                    <label>Email:</label><input type="text" id="mail"><br><br>
+                    <label>Studying at:</label><input type="text" id="std"><br><br>
+                    <label id="dob">Date of birth</label><input type="date"><br><br>
+                    
+                </div>
+                <div class="regid">
+                    <h1>Create an username</h1>
+                    <input type="text" placeholder="Username" id="usname"><br><br>
+                    <input type="password" placeholder="Password" id="upass"><br><br>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+display:flex;
+justify-content: center;
+align-items: center;
+min-height:200vh;
+flex-direction:column;
+gap:30px;
+background:#1b2b3a;
+}
+.inputbox{
+position:relative;
+width:250px;
+}
+.inputbox  input{
+width:100%;
+padding: 10px;
+border:1px solid rgba(255,255,255,0.25);
+background: #1b2b3a;
+border-radius: 5px;
+outline:none;
+color:#ffff;
+font-size:1em;
+transition:0.5s;
+}
+.inputbox span{
+position: absolute;
+left:0;
+padding: 10px;
+pointer-events: none;
+font-size: 1em;
+color: rgba(255,255,255,0.25);
+text-transform: uppercase;
+transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+color:aqua;
+transform:translateX(10px) translateY(-7px);
+font-size: 0.65em;
+padding:0 10px;
+background: #1b2b3a;
+border-left:1px solid #00dfc4;
+border-right:#00dfc4 ;
+letter-spacing: 0.2em;
+}
+
+.inputbox input:nth-child(2):valid ~ span,
+.inputbox input:nth-child(2):focus ~ span{
+    background:#00dfc4 ;
+    color:#1b2b3a;
+    border-radius:2px;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+border:1px solid rgba(255,255,255,0.25);
+}
+.container{
+    width:100%;
+    min-height:100vh;
+    padding:5%;
+    background-image: linear-gradient(rgba(0,8,51,0.9),rgba(0,8,51,0.9), url(images/background.jpg));
+    background-position: center;
+    background-size: cover;
+}
