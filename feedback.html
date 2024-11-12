@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        {
+            function validmail()
+            {
+                var id=document.getElementById("E").value;
+                var pattern=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if(id.match(pattern))
+            {
+              return true;
+            }
+            else
+            {
+              alert("Invalid Mail-ID");
+              return false;
+            }
+            }
+            function validuser()
+            {
+                var id=document.getElementById('U').value;
+                var pattern=/^[a-zA-Z0-9]+$/;
+                if(id.match(pattern))
+                {
+                    return true;
+                }
+                else
+                {
+                    alert("Userid Only Letters");
+                    return false;
+                }}
+                function validcheckk()
+                {
+                    var id=document.getElementsByName("know");
+                    if(id.checked)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        alert("select a Website");
+                    }
+                }
+                function validradio()
+                {
+                    var id=document.getElementsByName("opt");
+                    var radio=false;
+                    for(var i=0;i<radio.length;i++)
+                    {
+                        if(radio[i].checked)
+                        {
+                            radio=true;
+                            break;
+                        }
+                    }
+                    if(radio)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        alert("Select a Website work");
+                    }
+
+                }
+                function validradio2()
+                {
+                    var id=document.getElementsByName("YN");
+                    var radio=false;
+                    for(var i=0;i<radio.length;i++)
+                    {
+                        if(radio[i].checked)
+                        {
+                            radio=true;
+                            break;
+                        }
+                    }
+                    if(radio)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        alert("Select Your Friends");
+                    }
+                }
+                function feedback() 
+                {
+                    
+                    if(validmail())
+                    {
+                        if(validuser())
+                        {
+                            if(validradio())
+                            {
+                                if(validradio2())
+                                {
+                                    if(validcheckk())
+                                    {
+                                        alert("Feedback Accepted");
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                }
+                
+            }
+    </script>
+    
+    <style>
+        .wrp{
+            margin-top: 10px;
+            border:1px solid rgb(193, 210, 225);
+            display: inline-block;
+            padding: 20px;
+            color:rgb(70, 70, 156)               
+        }
+        body{
+            background-size: cover;
+            background-image:linear-gradient(rgba(246, 247, 254, 0.9),rgba(25, 48, 161, 0.9)), url('background2.jpg');
+        }
+        input{            
+            background: #1b2b3a;
+            color: antiquewhite;
+        }
+        button{
+            padding:5px;
+            border-radius: 15%;
+            background:transparent;
+            color:aliceblue;
+        }
+        h4{
+            color:lightcyan;
+            border:1px solid rgb(17, 76, 106);
+            display: inline;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5%;
+            background:  #1b2b3a;
+        }
+        marquee p{
+            color:aquamarine;         
+        }
+       textarea{
+        background: #1b2b3a;
+        resize: none;
+        height: 100px;
+        width:300px;
+       }
+       .mail{
+        display: inline-block;
+        height:50px;
+       }
+       .mail input{
+        height:25px;
+        border-radius: 5%;
+       }
+       input::placeholder{
+         font-family: 'Times New Roman', Times, serif;
+       }         
+       textarea::placeholder{
+        font-family: 'Times New Roman', Times, serif;
+       }  
+       p{
+       
+        font-family: Georgia, 'Times New Roman', Times, serif;
+       }
+       .head{
+        border:4px solid white;
+        text-align: center;
+        background:  #0960508b;
+       }
+       .head h1{
+        color:antiquewhite;
+       }
+       #TL{
+        width: 100px;
+        height: 100px;
+        background-color: #0960508b ;
+        position: absolute;
+        margin-left: 200px;
+        border-radius: 7px;
+        margin-top: 400px;
+       }
+       #TL a{
+        text-decoration: none;
+       }
+       #UL{
+        width: 100px;
+        height: 100px;
+        background-color: #0960508b ;
+        position: absolute;
+        margin-left: 1200px;
+        border-radius: 7px;
+        margin-top: 400px;
+       }
+       #UL a{
+        text-decoration: none;
+       }
+    </style>
+
+</head>
+<body>  
+     
+      
+    <form action="" align="center">
+        <div id="TL"><p >Teacher Login <br><a href="Teacher.html">Click here to login</a></p></div>
+        <div id="UL"><p >User Login <br><a href="USER.html">Click here to login</a></p></div>
+        <div class="head">
+            <h1>Your feedback is important to us!</h1>
+            <p>Please take this 5 min(or less) survey,so we can serve <br>you better in years to comne.</p>
+        </div>
+        <div class="wrp">
+            <div class="mail">
+                <input type="email"  size="20" required placeholder="Email" id="E">
+                <input type="text"  size="20" required placeholder="Username" style="margin-left: 20px;" id="U">
+        
+            </div>
+            <br>
+            <p>Do you like how our website works</p>
+            <input type="radio" name="opt"  value="opt1"><label>Yes</label>
+            <input type="radio" name="opt" value="opt2"><label>No</label><br>
+            <hr>
+            <div style="border:1px solid aqua; background: #1b2b3a; height:50px; display: inline-block; ">
+                <label>Rate our sevice on a scale of 10</label>
+                <input type="number" min="1" max="10" style="background:rgba(15, 86, 167, 0.685); border:none; height: 100%;">
+        
+            </div>
+            <hr>
+        
+            <p>Would you suggest our website to your friends?</p>
+            <input type="radio" name="YN" value="opt1">Yes
+            <input type="radio" name="YN" value="opt2">No
+            <br><hr>
+            <p>How did you come through our website?</p>
+            <input type="checkbox" name="know">Friends
+            <input type="checkbox" name="know">Family
+            <input type="checkbox" name="know">Advertisement
+            <input type="checkbox" name="know">Others
+            <br><hr>
+            <input type="text" placeholder="Other requests" size="50">
+            <hr>
+        
+            <p>Upload your notes for PCMB, below</p>
+            <input type="file"><br><br>
+            <button type="submit" onclick="feedback();">Submit</button>
+            <button type="reset">Clear</button>
+        </div>
+        <div class="marquee">
+            <marquee behavior="scroll" direction="right" scrollamount="30">
+                <p style="border:2px solid teal; display:inline-block; background: #1b2b3a; ">Your <b>feedback</b> is valuable to us</p>
+            </marquee>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,27 @@
+/* Question 3.1 */
+.rgb-text {
+    color: rgb(51, 204, 0);
+}
+
+/* Question 3.2 */
+.word-background {
+    font-size: 39px;
+    background-image: url('rose.jpeg');
+    background-size: contain;
+}
+
+/* Question 3.3 */
+.page-background {
+    background-image: url('background_image.jpg');
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Question 3.4 */
+.link-text {
+    color: darkred;
+    font-variant: small-caps;
+    font-size: 50%;
+    text-decoration: none;
+}
